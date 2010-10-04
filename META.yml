@@ -2,33 +2,17 @@
 abstract: 'CPAN Meta DB source implementation'
 author:
   - 'Chris Williams <chris@bingosnet.co.uk>'
-build_requires:
-  ExtUtils::MakeMaker: 6.42
-  Test::More: 0.47
+  - 'Jos Boumans <kane@cpan.org>'
+build_requires: {}
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
-distribution_type: module
-generated_by: 'Module::Install version 1.00'
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.102341, CPAN::Meta::Converter version 2.102400'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: CPANPLUS-Internals-Source-CPANMetaDB
-no_index:
-  directory:
-    - examples
-    - inc
-    - t
-provides:
-  CPANPLUS::Internals::Source::CPANMetaDB:
-    file: lib/CPANPLUS/Internals/Source/CPANMetaDB.pm
-    version: 0.02
-  CPANPLUS::Internals::Source::CPANMetaDB::HTTP:
-    file: lib/CPANPLUS/Internals/Source/CPANMetaDB/HTTP.pm
-    version: 0.02
-  CPANPLUS::Internals::Source::CPANMetaDB::Tie:
-    file: lib/CPANPLUS/Internals/Source/CPANMetaDB/Tie.pm
-    version: 0.02
 requires:
   CPANPLUS: 0.9001
   File::Fetch: 0
@@ -37,9 +21,8 @@ requires:
   Module::Load::Conditional: 0
   Params::Check: 0
   Parse::CPAN::Meta: 0
-  perl: 5.6.0
+  perl: v5.6.0
 resources:
   homepage: http://github.com/bingos/cpanplus-internals-source-cpanmetadb/tree
-  license: http://dev.perl.org/licenses/
   repository: git://github.com/bingos/cpanplus-internals-source-cpanmetadb.git
-version: 0.02
+version: 0.04

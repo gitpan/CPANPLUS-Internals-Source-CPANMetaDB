@@ -1,4 +1,9 @@
 package CPANPLUS::Internals::Source::CPANMetaDB;
+BEGIN {
+  $CPANPLUS::Internals::Source::CPANMetaDB::VERSION = '0.04';
+}
+
+#ABSTRACT: CPAN Meta DB source implementation
 
 use strict;
 use warnings;
@@ -14,10 +19,6 @@ use Locale::Maketext::Simple    Class => 'CPANPLUS', Style => 'gettext';
 use Module::Load::Conditional   qw[check_install];
 
 use constant CPANMETADB => 'http://cpanmetadb.appspot.com/';
-
-use vars qw($VERSION);
-
-$VERSION = '0.02';
 
 {
     my $cpanmetadb = $ENV{PERL5_CPANMETADB_URL} || CPANMETADB;
@@ -163,11 +164,17 @@ $VERSION = '0.02';
 
 1;
 
-__END__
 
-=head1 NAME 
+__END__
+=pod
+
+=head1 NAME
 
 CPANPLUS::Internals::Source::CPANMetaDB - CPAN Meta DB source implementation
+
+=head1 VERSION
+
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -224,19 +231,9 @@ as CPAN ID is valid.
 
 If this is a problem have a look at L<CPANPLUS::Internals::Source::CPANIDX> instead.
 
-=head1 AUTHOR
-
-Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
-
-Jos Boumans <kane@cpan.org>
+=head1 KUDOS
 
 CPAN Meta DB was created by Tatsuhiko Miyagawa for L<App::cpanminus>
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams and Jos Boumans
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
@@ -248,4 +245,26 @@ L<http://cpanmetadb.appspot.com/>
 
 L<CPANPLUS::Internals::Source::CPANIDX>
 
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Chris Williams <chris@bingosnet.co.uk>
+
+=item *
+
+Jos Boumans <kane@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Chris Williams, Jos Boumans, Roy Hooper and Adam Kennedy.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+

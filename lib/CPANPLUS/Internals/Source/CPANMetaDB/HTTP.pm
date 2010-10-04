@@ -1,15 +1,15 @@
 package CPANPLUS::Internals::Source::CPANMetaDB::HTTP;
+BEGIN {
+  $CPANPLUS::Internals::Source::CPANMetaDB::HTTP::VERSION = '0.04';
+}
+
+#ABSTRACT: Lightweight HTTP implementation
 
 use 5.005;
 use strict;
 use Socket 1.3;
 use Fcntl;
 use Errno qw(EAGAIN);
-
-use vars qw($VERSION);
-BEGIN {
-	$VERSION = "0.02";
-}
 
 my $BLOCKSIZE = 65536;
 my $CRLF = "\r\n";
@@ -107,7 +107,7 @@ sub reset
   }
   $self->{HTTPReadBuffer} = "";
   $self->{method} = "GET";
-  $self->{headers} = { 'user-agent' => "HTTP::Lite/$VERSION" };
+  $self->{headers} = { 'user-agent' => "HTTP::Lite/$CPANPLUS::Internals::Source::CPANMetaDB::HTTP::VERSION" };
   $self->{headermap} = { 'user-agent'  => 'User-Agent' };
 }
 
@@ -755,13 +755,17 @@ sub upper
 
 1;
 
-__END__
 
+__END__
 =pod
 
 =head1 NAME
 
-HTTP::Lite - Lightweight HTTP implementation
+CPANPLUS::Internals::Source::CPANMetaDB::HTTP - Lightweight HTTP implementation
+
+=head1 VERSION
+
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -799,6 +803,18 @@ HTTP::Lite - Lightweight HTTP implementation
     comprehensive package than HTTP::Lite, and should be used instead
     of HTTP::Lite whenever possible.
 
+=for Pod::Coverage        DEBUG
+       add_to_body
+       enum_req_headers
+       escape
+       header_at_once
+       http_read
+       http_readbytes
+       http_readline
+       http_write
+       initialize
+       upper
+
 =head1 CONSTRUCTOR
 
 =over 4
@@ -813,7 +829,6 @@ arguments.  A future version of HTTP::Lite might accept parameters.
 =head1 METHODS
 
 =over 4
-
 
 =item request ( $url, $data_callback, $cbargs )
 
@@ -886,8 +901,6 @@ The current phases are:
             documents.
 
   done - Request is done.
-
-
 
 =item prepare_post ( $hashref )
 
@@ -1028,14 +1041,14 @@ setting.  Usual choices are GET, POST, PUT, HEAD
     - Redirects (Location) are not automatically followed
     - multipart/form-data POSTs are not directly supported (necessary
       for File uploads).
-    
+
 =head1 BUGS
 
     Some broken HTTP/1.1 servers send incorrect chunk sizes
     when transferring files.  HTTP/1.1 mode is now disabled by
     default.
 
-=head1 AUTHOR
+=head1 AUTHORS
 
 Roy Hooper <rhooper@thetoybox.org>
 
@@ -1044,7 +1057,7 @@ Roy Hooper <rhooper@thetoybox.org>
 L<LWP>
 RFC 2068 - HTTP/1.1 -http://www.w3.org/
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT AND LICENSE
 
 Copyright (c) 2000-2002 Roy Hooper.  All rights reserved.
 
@@ -1053,4 +1066,26 @@ Some parts copyright 2009 Adam Kennedy.
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Chris Williams <chris@bingosnet.co.uk>
+
+=item *
+
+Jos Boumans <kane@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Chris Williams, Jos Boumans, Roy Hooper and Adam Kennedy.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+

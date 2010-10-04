@@ -1,4 +1,9 @@
 package CPANPLUS::Internals::Source::CPANMetaDB::Tie;
+BEGIN {
+  $CPANPLUS::Internals::Source::CPANMetaDB::Tie::VERSION = '0.04';
+}
+
+#ABSTRACT: A tie for the CPAN Meta DB source engine
 
 use strict;
 use warnings;
@@ -18,10 +23,8 @@ use CPANPLUS::Internals::Source::CPANMetaDB::HTTP;
 use Parse::CPAN::Meta;
 
 require Tie::Hash;
-use vars qw[@ISA $VERSION];
+use vars qw[@ISA];
 push @ISA, 'Tie::StdHash';
-
-$VERSION = '0.02';
 
 sub TIEHASH {
     my $class = shift;
@@ -161,29 +164,23 @@ sub CLEAR    {  }
 
 qq[Tie your mother down]
 
+
 __END__
+=pod
 
 =head1 NAME
 
 CPANPLUS::Internals::Source::CPANMetaDB::Tie - A tie for the CPAN Meta DB source engine
+
+=head1 VERSION
+
+version 0.04
 
 =head1 DESCRIPTION
 
 CPANPLUS::Internals::Source::CPANMetaDB::Tie is a tie for L<CPANPLUS::Internals::Source::CPANMetaDB>.
 
 It has no user serviceable parts.
-
-=head1 AUTHOR
-
-Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
-
-Jos Boumans <kane@cpan.org>
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams and Jos Boumans
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
@@ -193,4 +190,26 @@ L<CPANPLUS::Internals::Source>
 
 L<http://cpanmetadb.appspot.com/>
 
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Chris Williams <chris@bingosnet.co.uk>
+
+=item *
+
+Jos Boumans <kane@cpan.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Chris Williams, Jos Boumans, Roy Hooper and Adam Kennedy.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+

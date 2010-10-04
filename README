@@ -2,6 +2,9 @@ NAME
     CPANPLUS::Internals::Source::CPANMetaDB - CPAN Meta DB source
     implementation
 
+VERSION
+    version 0.04
+
 SYNOPSIS
       # In the CPANPLUS shell
 
@@ -60,19 +63,8 @@ CAVEATS
     If this is a problem have a look at CPANPLUS::Internals::Source::CPANIDX
     instead.
 
-AUTHOR
-    Chris "BinGOs" Williams <chris@bingosnet.co.uk>
-
-    Jos Boumans <kane@cpan.org>
-
+KUDOS
     CPAN Meta DB was created by Tatsuhiko Miyagawa for App::cpanminus
-
-LICENSE
-    Copyright © Chris Williams and Jos Boumans
-
-    This module may be used, modified, and distributed under the same terms
-    as Perl itself. Please see the license that came with your Perl
-    distribution for details.
 
 SEE ALSO
     CPANPLUS
@@ -82,4 +74,16 @@ SEE ALSO
     <http://cpanmetadb.appspot.com/>
 
     CPANPLUS::Internals::Source::CPANIDX
+
+AUTHORS
+    *   Chris Williams <chris@bingosnet.co.uk>
+
+    *   Jos Boumans <kane@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2010 by Chris Williams, Jos Boumans, Roy
+    Hooper and Adam Kennedy.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 
