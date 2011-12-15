@@ -1,6 +1,6 @@
 package CPANPLUS::Internals::Source::CPANMetaDB;
-BEGIN {
-  $CPANPLUS::Internals::Source::CPANMetaDB::VERSION = '0.04';
+{
+  $CPANPLUS::Internals::Source::CPANMetaDB::VERSION = '0.06';
 }
 
 #ABSTRACT: CPAN Meta DB source implementation
@@ -18,7 +18,7 @@ use Params::Check               qw[allow check];
 use Locale::Maketext::Simple    Class => 'CPANPLUS', Style => 'gettext';
 use Module::Load::Conditional   qw[check_install];
 
-use constant CPANMETADB => 'http://cpanmetadb.appspot.com/';
+use constant CPANMETADB => 'http://cpanmetadb.plackperl.org/';
 
 {
     my $cpanmetadb = $ENV{PERL5_CPANMETADB_URL} || CPANMETADB;
@@ -174,7 +174,7 @@ CPANPLUS::Internals::Source::CPANMetaDB - CPAN Meta DB source implementation
 
 =head1 VERSION
 
-version 0.04
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -261,7 +261,7 @@ Jos Boumans <kane@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Chris Williams, Jos Boumans, Roy Hooper and Adam Kennedy.
+This software is copyright (c) 2011 by Chris Williams, Jos Boumans, Roy Hooper and Adam Kennedy.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

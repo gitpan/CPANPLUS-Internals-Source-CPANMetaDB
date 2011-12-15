@@ -5,9 +5,9 @@ author:
   - 'Jos Boumans <kane@cpan.org>'
 build_requires: {}
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.102341, CPAN::Meta::Converter version 2.102400'
+generated_by: 'Dist::Zilla version 4.300005, CPAN::Meta::Converter version 2.112621'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,6 +23,6 @@ requires:
   Parse::CPAN::Meta: 0
   perl: v5.6.0
 resources:
-  homepage: http://github.com/bingos/cpanplus-internals-source-cpanmetadb/tree
-  repository: git://github.com/bingos/cpanplus-internals-source-cpanmetadb.git
-version: 0.04
+  homepage: https://github.com/bingos/cpanplus-internals-source-cpanmetadb
+  repository: https://github.com/bingos/cpanplus-internals-source-cpanmetadb.git
+version: 0.06

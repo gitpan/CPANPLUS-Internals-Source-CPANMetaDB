@@ -5,7 +5,7 @@
       "Jos Boumans <kane@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.102341, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.300005, CPAN::Meta::Converter version 2.112621",
    "license" : [
       "perl_5"
    ],
@@ -17,7 +17,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
@@ -35,13 +35,13 @@
    },
    "release_status" : "stable",
    "resources" : {
-      "homepage" : "http://github.com/bingos/cpanplus-internals-source-cpanmetadb/tree",
+      "homepage" : "https://github.com/bingos/cpanplus-internals-source-cpanmetadb",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/bingos/cpanplus-internals-source-cpanmetadb.git",
-         "web" : "http://github.com/bingos/cpanplus-internals-source-cpanmetadb/tree"
+         "url" : "https://github.com/bingos/cpanplus-internals-source-cpanmetadb.git",
+         "web" : "https://github.com/bingos/cpanplus-internals-source-cpanmetadb"
       }
    },
-   "version" : "0.04"
+   "version" : "0.06"
 }
 

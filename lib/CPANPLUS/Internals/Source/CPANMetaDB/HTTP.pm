@@ -1,6 +1,6 @@
 package CPANPLUS::Internals::Source::CPANMetaDB::HTTP;
-BEGIN {
-  $CPANPLUS::Internals::Source::CPANMetaDB::HTTP::VERSION = '0.04';
+{
+  $CPANPLUS::Internals::Source::CPANMetaDB::HTTP::VERSION = '0.06';
 }
 
 #ABSTRACT: Lightweight HTTP implementation
@@ -765,7 +765,7 @@ CPANPLUS::Internals::Source::CPANMetaDB::HTTP - Lightweight HTTP implementation
 
 =head1 VERSION
 
-version 0.04
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -1082,7 +1082,7 @@ Jos Boumans <kane@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Chris Williams, Jos Boumans, Roy Hooper and Adam Kennedy.
+This software is copyright (c) 2011 by Chris Williams, Jos Boumans, Roy Hooper and Adam Kennedy.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

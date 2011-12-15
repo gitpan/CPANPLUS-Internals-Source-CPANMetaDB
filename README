@@ -3,7 +3,7 @@ NAME
     implementation
 
 VERSION
-    version 0.04
+    version 0.06
 
 SYNOPSIS
       # In the CPANPLUS shell
@@ -81,7 +81,7 @@ AUTHORS
     *   Jos Boumans <kane@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2010 by Chris Williams, Jos Boumans, Roy
+    This software is copyright (c) 2011 by Chris Williams, Jos Boumans, Roy
     Hooper and Adam Kennedy.
 
     This is free software; you can redistribute it and/or modify it under

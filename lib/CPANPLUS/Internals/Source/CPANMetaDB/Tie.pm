@@ -1,6 +1,6 @@
 package CPANPLUS::Internals::Source::CPANMetaDB::Tie;
-BEGIN {
-  $CPANPLUS::Internals::Source::CPANMetaDB::Tie::VERSION = '0.04';
+{
+  $CPANPLUS::Internals::Source::CPANMetaDB::Tie::VERSION = '0.06';
 }
 
 #ABSTRACT: A tie for the CPAN Meta DB source engine
@@ -174,7 +174,7 @@ CPANPLUS::Internals::Source::CPANMetaDB::Tie - A tie for the CPAN Meta DB source
 
 =head1 VERSION
 
-version 0.04
+version 0.06
 
 =head1 DESCRIPTION
 
@@ -206,7 +206,7 @@ Jos Boumans <kane@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Chris Williams, Jos Boumans, Roy Hooper and Adam Kennedy.
+This software is copyright (c) 2011 by Chris Williams, Jos Boumans, Roy Hooper and Adam Kennedy.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
